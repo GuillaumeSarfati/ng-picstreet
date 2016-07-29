@@ -1,0 +1,55 @@
+#marker-photographer {
+	margin-left: -27px;
+	margin-top: -90px;
+	height: 100px;
+	width: 55px;
+
+	@keyframes sonarWave {
+		from {
+			opacity: 0.4;
+		}
+		to {
+			transform: scale(5);
+			opacity: 0;
+		}
+	}
+	
+
+	display:flex;
+	flex-direction:column;
+	#item-current-location {
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+
+		transition: all .3s ease;
+		
+		.sonar-location {
+			margin-bottom: -3px;
+			.text-center;
+			position:relative;
+
+			.sonar-wave {
+				position:absolute;
+				top:0;
+				left: ~"calc(50% - (21px / 2))";
+				width:21px;
+				height:21px;
+				background:@green;
+				border-radius:100%;
+				pointer-events:none;
+				z-index: -1;
+				animation: sonarWave 2s linear infinite;
+			}
+		}
+	}
+
+	#item-current-location-bar {
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		transition: all .3s ease;
+		margin-top: -5px;
+		margin-bottom: -5px;
+	}
+}

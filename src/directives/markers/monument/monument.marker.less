@@ -1,0 +1,126 @@
+#marker-monument {
+
+	width: 90px;
+	height: 180px;
+	margin-left: -45px;
+	margin-top: -185px;
+
+	display:flex;
+	flex-direction:column;
+	#item-current-location {
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+
+		transition: all .3s ease;
+		
+		.sonar-location {
+			margin-bottom: -3px;
+			.text-center;
+			position:relative;
+
+			.sonar-wave {
+				position:absolute;
+				top:0;
+				left: ~"calc(50% - (21px / 2))";
+				width:21px;
+				height:21px;
+				background:@blue;
+				border-radius:100%;
+				pointer-events:none;
+				z-index: -1;
+				animation: sonarWave 2s linear infinite;
+			}
+		}
+	}
+	#marker-shooting {
+		@keyframes sonarWave {
+			from {
+				opacity: 0.4;
+			}
+			to {
+				transform: scale(5);
+				opacity: 0;
+			}
+		}
+		@width: 60px;
+		@height: 60px;
+
+		position:fixed;
+		// top: 60px;
+		top: ~"calc((50vh - 30px + 43px))";
+		left:~"calc((50vw - 12.5vw))";
+		width: 25vw;
+
+		display:flex;
+		flex-direction:column;
+		#item-current-location {
+			display:flex;
+			flex-direction:column;
+			justify-content:center;
+
+			transition: all .3s ease;
+			
+			.sonar-location {
+				margin-bottom: -3px;
+				.text-center;
+				position:relative;
+
+				.sonar-wave {
+					position:absolute;
+					top:0;
+					left: ~"calc(50% - (21px / 2))";
+					width:21px;
+					height:21px;
+					background:@blue;
+					border-radius:100%;
+					pointer-events:none;
+					z-index: -1;
+					animation: sonarWave 2s linear infinite;
+				}
+			}
+		}
+	}
+	#item-current-location-bar {
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		transition: all .3s ease;
+	}
+	#item-reserve-free-shooting {
+		background:black;
+		
+		// padding-top: 20px;
+		padding-bottom: 20px;
+		
+		border-radius:5px;
+
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+
+		transition: all .3s ease;
+		img {
+			height: 94px;
+			border-radius:5px 5px 0px 0px;
+		}
+		div {
+			.text-uppercase;
+			.text-center;
+			
+			border: 0px solid white;
+			border-radius:5px;
+			
+			background:black;
+			color:white;
+
+			margin-top: 10px;
+			margin-left: 10px;
+			margin-right: 10px;
+
+			i.ion-ios-arrow-right {
+				margin-left: 10px;
+			}
+		}
+	}
+}

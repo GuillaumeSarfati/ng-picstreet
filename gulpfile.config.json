@@ -1,0 +1,9 @@
+{
+	"client": {
+		"name": "ngPicstreet",
+		"path": {
+			"src": "src",
+			"build": "dist"
+		}
+	}
+}

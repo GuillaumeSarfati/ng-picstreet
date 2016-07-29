@@ -1,0 +1,12 @@
+{
+  "name": "ng-picstreet",
+  "homepage": "https://github.com/GuillaumeSarfati/ng-picstreet",
+  "authors": [
+    "GuillaumeSarfati <guillaume.sarfati@student.42.fr>"
+  ],
+  "description": "",
+  "main": "dist/index.js",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true
+}

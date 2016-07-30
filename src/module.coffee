@@ -15,7 +15,6 @@ angular.module 'ngPicstreet', []
 		
 		createMap: (opts) ->
 
-			
 			map = new mapboxgl.Map
 
 				container: opts.map or 'map'
@@ -24,6 +23,7 @@ angular.module 'ngPicstreet', []
 				width: opts.width or '100vw'
 				height: opts.height or '100vh'
 				style: opts.style or 'mapbox://styles/pixer42/ciqozlkde003bcaneqk26ipny'
+				interactive: opts.interactive
 
 		createMarker: (templateName, scope) ->
 			template = $templateCache.get "#{templateName}.marker.html"
